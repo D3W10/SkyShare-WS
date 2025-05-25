@@ -28,7 +28,8 @@ server.on("connection", socket => {
     async function cleanConnection() {
         if (code)
             await client.query(`UNLISTEN "${code}"`);
-        client.off("notification", listener);
+        if (listener)
+            client.off("notification", listener);
     }
 
     socket.on("message", async message => {

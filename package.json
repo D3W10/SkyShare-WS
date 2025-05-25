@@ -1,0 +1,29 @@
+{
+    "name": "skyshare-ws",
+    "productName": "SkyShare WS",
+    "version": "1.0.0",
+    "description": "The WebSocket server for SkyShare",
+    "author": {
+        "name": "Daniel Nunes",
+        "url": "https://d3w10.netlify.app"
+    },
+    "scripts": {
+        "start": "bun index.ts"
+    },
+    "main": "index.ts",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/D3W10/SkyShare-WS"
+    },
+    "license": "MPL-2.0",
+    "dependencies": {
+        "pg": "^8.16.0",
+        "ws": "^8.18.2"
+    },
+    "devDependencies": {
+        "@types/pg": "^8.15.2",
+        "@types/ws": "^8.18.1",
+        "typescript": "^5.8.2"
+    }
+}

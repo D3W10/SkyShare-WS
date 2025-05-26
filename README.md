@@ -36,12 +36,6 @@ SkyShare WebSocket Server is the bridge that allows 2 peers to exchange their We
 This project consists in four different subprojects:
 > 🖥️&emsp;SkyShare [Desktop App](https://github.com/D3W10/SkyShare)
 >
-> 🔌&emsp;SkyShare [API](https://github.com/D3W10/SkyShare-API)
->
-> 🌐&emsp;SkyShare [Website](https://github.com/D3W10/SkyShare-Website)
->
-> 📩&emsp;SkyShare [Mail](https://github.com/D3W10/SkyShare-Mail)
->
 > 🔗&emsp;SkyShare [WebSocket Server](https://github.com/D3W10/SkyShare-WS)
 
 <br />
@@ -97,4 +91,5 @@ Distributed under the Mozilla Public License 2.0. Check `LICENSE` for more detai
 
 ## Credits
 
-- Made by [Daniel Nunes](https://d3w10.netlify.app/)
+- [Daniel Nunes](https://d3w10.netlify.app/)
+- Mihail Arcus

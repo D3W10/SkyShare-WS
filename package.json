@@ -3,10 +3,15 @@
     "productName": "SkyShare WS",
     "version": "1.0.0",
     "description": "The WebSocket server for SkyShare",
-    "author": {
-        "name": "Daniel Nunes",
-        "url": "https://d3w10.netlify.app"
-    },
+    "contributors": [
+        {
+            "name": "Daniel Nunes",
+            "url": "https://d3w10.netlify.app"
+        },
+        {
+            "name": "Mihail Arcus"
+        }
+    ],
     "scripts": {
         "start": "bun index.ts"
     },

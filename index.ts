@@ -56,7 +56,7 @@ server.on("connection", socket => {
             const offer = data.offer;
             code = generateCode();
 
-            socket.send(JSON.stringify({ type: "code", code }));
+            socket.send(JSON.stringify({ type: "code", data: { code } }));
             await client.query(`LISTEN "${code}"`);
 
             const timeout = setTimeout(async () => {

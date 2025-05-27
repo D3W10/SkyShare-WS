@@ -6,6 +6,7 @@ const server = new WebSocketServer({
     port: 8082
 });
 
+const TIMEOUT = 600000;
 const generateCode = () => Math.floor(100000 + Math.random() * 900000).toString();
 
 const client = new Client({
@@ -56,7 +57,7 @@ server.on("connection", socket => {
             const offer = data.offer;
             code = generateCode();
 
-            socket.send(JSON.stringify({ type: "code", data: { code } }));
+            socket.send(JSON.stringify({ type: "code", data: { code, timeout: TIMEOUT } }));
             await client.query(`LISTEN "${code}"`);
 
             const timeout = setTimeout(async () => {
@@ -64,7 +65,7 @@ server.on("connection", socket => {
                 cleanConnection();
                 socket.send(JSON.stringify({ type: "error", error: "timeout" }));
                 socket.close(1000, "Timeout reached.");
-            }, 600000);
+            }, TIMEOUT);
 
             listener = async (msg: Notification) => {
                 if (!msg.payload || msg.channel !== code)

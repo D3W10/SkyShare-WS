@@ -138,7 +138,7 @@ server.on("connection", socket => {
                 const { payload } = parseMsg(msg);
 
                 if (payload.type === "iceSender")
-                    socket.send(JSON.stringify({ type: "ice", data: payload.data }));
+                    socket.send(JSON.stringify({ type: "iceSender", data: payload.data }));
             }
 
             client.on("notification", listener);
